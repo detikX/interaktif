@@ -6,48 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/animate.min.css">
+    <link rel="stylesheet" href="sass/bootstrap.min.css">
 </head>
 <body>
     <main>
-        <section class="first">
-            <h1>Judul Dari Tema</h1>
-            <div class="first__cover">
-                <img src="img/cover-building.png" alt="">
-            </div>
-            <div class="first__wave one">
-            </div>
-            <div class="first__wave two">
-            </div>
-            <div class="first__wave three">
-            </div>
-            <div class="first__wave four">
-            </div>
-            <div class="first__wave five">
-            </div>
-
-            <div class="first__kilang">
-                <img src="img/cover-kilang-2.png" alt="">
-            </div>
-
-            <div class="first__perahu">
-                <img src="img/cover-perahu.png" alt="">
-            </div>
-
-            <div class="barengan">
-                <div class="first__kilang-big">
-                    <img src="img/cover-kilang.png" alt="">
+        <div id="fullpage">
+            <section class="first">
+                <h1>Judul Dari Tema</h1>
+                <div class="first__cover">
+                    <img src="img/cover-building.png" alt="">
                 </div>
-                <div class="first__fire">
-                    <img src="img/fire.gif" alt="">
+                <div class="first__wave one">
                 </div>
-            </div>
-        </section>
-
-        <section class="second">
-            <h1>lalalla</h1>
-        </section>
+                <div class="first__wave two">
+                </div>
+                <div class="first__wave three">
+                </div>
+                <div class="first__wave four">
+                </div>
+                <div class="first__wave five">
+                </div>
+                <div class="first__kilang">
+                    <img src="img/cover-kilang-2.png" alt="">
+                </div>
+                <div class="first__perahu">
+                    <img src="img/cover-perahu.png" alt="">
+                </div>
+                <div class="barengan">
+                    <div class="first__kilang-big">
+                        <img src="img/cover-kilang.png" alt="">
+                    </div>
+                    <div class="first__fire">
+                        <img src="img/fire.gif" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="second">
+                <div class="text-center">
+                    <p class="color-white pt-5">Bayangkan, apa yang terjadi jika listrik padam?</p>
+                </div>
+                <div class="second__bangunan">
+                    <div class="citys"><img src="img/bg-city.png" alt="" title></div>
+                    <div class="train wow animate__animated animate__fadeInRightBig"
+                    data-wow-delay=".5s">
+                        <img src="img/bg-city-train.png" alt="">
+                    </div>
+                    <div class="awan">
+                        <img src="img/bg-city-awan.png" alt="">
+                    </div>
+                    <div class="awan2">
+                        <img src="img/bg-city-awan2.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.slimscroll.min.js"></script> -->
+    <!-- <script src="js/fullpage.min.js"></script> -->
+    <!-- <script src="js/app.js"></script> -->
     <!-- <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bodymovin.js"></script>
     <script type="text/javascript" src="js/picturefill.min.js" async></script>
@@ -57,5 +79,10 @@
     <script type="text/javascript" src="js/velocity.min.js"></script>
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/main.js"></script> -->
+        <script>
+            $(()=>{
+                new WOW().init();
+            })
+        </script>
 </body>
 </html>
