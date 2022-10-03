@@ -249,8 +249,11 @@ section,main {
         }
         .awan {
             position: absolute;
-            bottom: 15%;
+            bottom: 8%;
             animation: run 3.5s linear infinite;
+            @media screen and (min-width:1440px) {
+                bottom: 15%;
+            }
 
         }
         .awan2 {
