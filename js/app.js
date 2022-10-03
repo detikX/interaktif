@@ -9,7 +9,7 @@ $(document).ready(function () {
             // animate__animated animate__fadeIn" data-wow-delay="0.5s"
              // first animation
                 if( index == 1 && nextIndex == 2 ) { 
-                    $isAnimatedSecond.addClass('animate__animated animate__fadeInRightBig').attr("data-wow-delay","1.5s"); 
+                    $isAnimatedSecond.addClass('animate__animated animate__fadeInRightBig').attr("data-wow-delay","2.5s"); 
                     //$isAnimatedSecond.eq(0).css('animation-delay', '.3s');
                     // $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
                     // $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
