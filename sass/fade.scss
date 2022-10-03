@@ -212,10 +212,16 @@
             width: 100%;
             position: absolute;
             bottom: 10%;
+            @media screen and (max-width:766px) {
+                height: 100%;
+            }
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
             }
         }
         .train {
@@ -223,16 +229,19 @@
             bottom: 4%;
             @media screen and (max-width:766px) {
                 position: absolute;
-                bottom: -27%;
+                bottom: 10%;
                 right: -20%;
                 width: 100%;
                 height: 100%;
+                z-index: 9;
+                left: 0;
+                right: 0;
             }
             img {
                 @media screen and (max-width:766px) {
                     width: 100%;
                     height: 100%;
-                    object-fit: contain;
+                    object-fit: cover;
                 }
             }
             @media screen and (min-width:1440px) {
@@ -262,6 +271,9 @@
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
             }
             @media screen and (min-width:1440px) {
                 bottom: 15%;
@@ -278,6 +290,9 @@
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
+                @media screen and (max-width:766px) {
+                    object-fit: cover;
+                }
             }
         }
     }
