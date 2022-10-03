@@ -216,6 +216,20 @@
         .train {
             position: absolute;
             bottom: 4%;
+            @media screen and (max-width:766px) {
+                position: absolute;
+                bottom: -27%;
+                right: -20%;
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                @media screen and (max-width:766px) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
             @media screen and (min-width:1440px) {
                 right: 10%;   
                 bottom: 10%; 
@@ -237,6 +251,13 @@
             position: absolute;
             bottom: 8%;
             animation: run 3.5s linear infinite;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
             @media screen and (min-width:1440px) {
                 bottom: 15%;
             }
@@ -246,6 +267,13 @@
             position: absolute;
             bottom: 18%;
             animation: run 4.5s linear infinite;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
     }
 }
