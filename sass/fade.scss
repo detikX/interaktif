@@ -173,7 +173,7 @@
         position: absolute;
         bottom: -5%;
         left: 15%;
-        z-index: 8;
+        z-index: 7;
         @media screen and (max-width:766px) {
             animation: MoveUpDownMob 2.5s linear infinite;
             position: absolute;
@@ -387,6 +387,9 @@
             bottom: 0;
             width: 100%;
             height: 100%;
+            @media screen and (max-width:766px) {
+                top: -40%;
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -442,6 +445,9 @@ main {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
         }
     }
     .image-mobil-1 {
@@ -456,6 +462,9 @@ main {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
         }
     }
     .image-mobil-2 {
@@ -470,6 +479,9 @@ main {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
         }
     }
     .image-jalan {
@@ -484,6 +496,9 @@ main {
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media screen and (max-width:766px) {
+                object-fit: cover;
+            }
         }
     }
 }

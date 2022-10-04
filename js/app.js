@@ -4,6 +4,7 @@ $(document).ready(function () {
 		var slideIndexBis = 1;
 		var sliding = false;
     var $isAnimatedSecond = $('.second .is-animated');
+    var $isAnimatedFour = $('.four .is-animated');
 	$('#fullpage').fullpage({
         onLeave: function(index,nextIndex, direction){
             // animate__animated animate__fadeIn" data-wow-delay="0.5s"
@@ -16,37 +17,17 @@ $(document).ready(function () {
                     //$isAnimatedSecondSingle.addClass('animated animate__fadeInRightBig').css('animation-delay', '1.7s');
                 }
 
-                /**
-                 * use the following condition: 
-                 *
-                 *   else if( index == 2 && direction == 'down' ) {
-                 *
-                 * if you haven't enabled the dot navigation
-                 * or you aren't interested in the animations that occur 
-                 * when you jump (using the dot navigation) from the first section to the third one 
-                 */
-                
-                // second animation
                 else if( ( index == 1 || index == 2 ) && nextIndex == 3 ) {
-                    // $isAnimatedThird.eq(0).addClass('animated fadeInRightBig').css('animation-delay', '.3s'); 
+                    // $isAnimatedThird.addClass('animate__animated animate__fadeInLeft animate__repeat-2	2').attr("data-wow-delay","2.5s"); 
                     // $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
                     // $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
                 }
 
-                
-                /**
-                 * use the following condition:
-                 *
-                 *   else if( index == 3 && direction == 'down' ) {
-                 *
-                 * if you haven't enabled the dot navigation
-                 * or you aren't interested in the animations that occur 
-                 * when you jump (using the dot navigation) 
-                 * from the first or second section to the fourth one 
-                 */
-                
+           
                 // third animation
                 else if( ( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
+                    $isAnimatedFour.eq(0).addClass('animate__animated animate__fadeInRight').attr("data-wow-delay","2.5s");
+                    $isAnimatedFour.eq(1).addClass('animate__animated animate__fadeInLeft').attr("data-wow-delay","3.8s");;
                     // $isAnimatedFourth.addClass('animated zoomIn').css('animation-delay', '.6s');
                     // $isAnimatedFourthSingle.addClass('animated lightSpeedIn').css('animation-delay', '1.2s');
                     // $isAnimatedFourthSingle.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
