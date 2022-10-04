@@ -229,7 +229,7 @@
             left: 0;
             right: 0;
             @media screen and (max-width:766px) {
-                bottom: 8%;
+                bottom: 0%;
             }
         }
         .citys {
@@ -239,7 +239,7 @@
             bottom: 10%;
             @media screen and (max-width:766px) {
                 height: 100%;
-                bottom: 8%;
+                bottom: 0%;
             }
             img {
                 width: 100%;
@@ -255,7 +255,7 @@
             bottom: 4%;
             @media screen and (max-width:766px) {
                 position: absolute;
-                bottom: 8%;
+                bottom: 0%;
                 right: -20%;
                 width: 100%;
                 height: 100%;
@@ -289,7 +289,7 @@
         }
         .awan {
             position: absolute;
-            bottom: 8%;
+            bottom: 0%;
             animation: run 3.5s linear infinite;
             width: 100%;
             height: 100%;
@@ -342,7 +342,7 @@
             bottom: 10%;
             @media screen and (max-width:766px) {
                 height: 100%;
-                bottom: 8%;
+                bottom: 0%;
             }
             img {
                 width: 100%;
@@ -358,7 +358,7 @@
             bottom: 4%;
             @media screen and (max-width:766px) {
                 position: absolute;
-                bottom: 8%;
+                bottom: 0%;
                 right: -20%;
                 width: 100%;
                 height: 100%;
@@ -414,7 +414,7 @@
         right: 0;
         @media screen and (max-width:766px) {
             // height: 100%;
-            bottom: 8%;
+            bottom: 0%;
         }
     }
 }
@@ -525,7 +525,7 @@ main {
             padding-top: 16px;
         }
     }
-    &__first,&__second {
+    &__first,&__second,&__third,&__four,&__five,&__six,&__seven {
         position: absolute;
         left: 0;
         right: 0;
@@ -533,14 +533,28 @@ main {
         bottom: 0;
         width: 100%;
         height: 100%;
+        z-index: 6;
         @media screen and (max-width:766px) {
             height: initial;
+            top: initial;
         }
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @media screen and(max-width:766px){
+                object-fit: contain;
+            }
         }
+    }
+    &__seven {
+        z-index: 2;
+    }
+}
+
+.opt-absolute {
+    @media screen and (max-width:766px) {
+        position: absolute;    
     }
 }
 
