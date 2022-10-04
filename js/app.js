@@ -36,12 +36,12 @@ $(document).ready(function () {
                 }
         },
         // first animation
-		anchors: [
-			'page1',
-			'page2',
-			'page3',
-			'page4'
-		],
+		// anchors: [
+		// 	'page1',
+		// 	'page2',
+		// 	'page3',
+		// 	'page4'
+		// ],
 		sectionsColor: [
 			'#00B0FF',
 			'#00C853',
