@@ -56,13 +56,13 @@ $(document).ready(function () {
 
                 else if( ( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 || index == 6 || index == 7 ) && nextIndex == 8 ) {
                     $isAnimatedEight.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s 1s');
-                    $isAnimatedEight.eq(1).addClass('animate__animated animate__fadeInLeftBig animate__delay-3s 3s');
+                    $isAnimatedEight.eq(1).addClass('animate__animated animate__fadeInLeftBig animate__delay-2s 2s');
                     // $isAnimatedEight.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
                 }
 
                 else if( ( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 || index == 6 || index == 7 || index == 8 ) && nextIndex == 9 ) {
                     $isAnimatedNine.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s 1s');
-                    $isAnimatedNine.eq(1).addClass('animate__animated animate__fadeInLeftBig animate__delay-3s 3s');
+                    $isAnimatedNine.eq(1).addClass('animate__animated animate__fadeInLeftBig animate__delay-2s 2s');
                     // $isAnimatedEight.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
                 }
         },
