@@ -1,65 +1,63 @@
+$(document).ready(function () {
+  // new WOW().init();
+/* Slide variable */
+  var slideIndexBis = 1;
+  var sliding = false;
+  var $isAnimatedSecond = $('.second .is-animated');
+  var $isAnimatedFour = $('.four .is-animated');
+  var $isAnimatedFive = $('.five .is-animated');
+  var $isAnimatedSix = $('.six .is-animated');
+$('#fullpage').fullpage({
+      onLeave: function(index,nextIndex, direction){
+          // animate__animated animate__fadeIn" data-wow-delay="0.5s"
+           // first animation
+              if( index == 1 && direction == "up" ) { 
+                  $isAnimatedSecond.addClass('animate__animated animate__fadeInRightBig animate__delay-2s 2s')
+                  //$isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+                  // $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
+                  // $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
+                  //$isAnimatedSecondSingle.addClass('animated animate__fadeInRightBig').css('animation-delay', '1.7s');
+              }
 
-// variables
-var $header_top = $('.header-top');
-var $nav = $('nav');
+              else if( index == 2 && direction == "up" ) {
+                  // $isAnimatedThird.addClass('animate__animated animate__fadeInLeft animate__repeat-2	2').attr("data-wow-delay","2.5s"); 
+                  // $isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
+                  // $isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
+              }
 
+         
+              // third animation
+              else if(  index == 3 && direction == "up" ) {
+                  $isAnimatedFour.eq(0).addClass('animate__animated animate__fadeInRight animate__delay-1s 1s');
+                  $isAnimatedFour.eq(1).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
+              }
+              else if( ( index == 1 || index == 2 || index == 3 || index == 4 ) && nextIndex == 5 ) {
+                  $isAnimatedFive.eq(0).addClass('animate__animated animate__fadeInLeft animate__delay-1s 1s');
+                  $isAnimatedFive.eq(1).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
+                  $isAnimatedFive.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-3s 3s');
+                  $isAnimatedFive.eq(3).addClass('animate__animated animate__fadeInRight animate__delay-4s 4s');
+                  $isAnimatedFive.eq(4).addClass('animate__animated animate__fadeInRight animate__delay-5s 5s');
+              }
 
-
-// toggle menu 
-$header_top.find('a').on('click', function() {
-  $(this).parent().toggleClass('open-menu');
+              else if( ( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 ) && nextIndex == 6 ) {
+                  $isAnimatedSix.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s 1s');
+                  $isAnimatedSix.eq(1).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
+                  $isAnimatedSix.eq(2).addClass('animate__animated animate__fadeInRight animate__delay-5s 5s');
+              }
+      },
+      // first animation
+  // anchors: [
+  // 	'page1',
+  // 	'page2',
+  // 	'page3',
+  // 	'page4'
+  // ],
+  sectionsColor: [
+    '#00B0FF',
+    '#00C853',
+    '#FF1744',
+    '#6200ea'
+  ]
 });
 
-
-
-// fullpage customization
-$('#fullpage').fullpage({
-  sectionsColor: ['#B8AE9C', '#348899', '#F2AE72', '#5C832F', '#B8B89F'],
-  sectionSelector: '.vertical-scrolling',
-  slideSelector: '.horizontal-scrolling',
-  navigation: true,
-  slidesNavigation: true,
-  controlArrows: false,
-  anchors: ['firstSection', 'secondSection', 'thirdSection', 'fourthSection', 'fifthSection'],
-  menu: '#menu',
-
-  afterLoad: function(anchorLink, index) {
-    $header_top.css('background', 'rgba(0, 47, 77, .3)');
-    $nav.css('background', 'rgba(0, 47, 77, .25)');
-    if (index == 5) {
-        $('#fp-nav').hide();
-      }
-  },
-
-  onLeave: function(index, nextIndex, direction) {
-    if(index == 5) {
-      $('#fp-nav').show();
-    }
-  },
-
-  afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
-    if(anchorLink == 'fifthSection' && slideIndex == 1) {
-      $.fn.fullpage.setAllowScrolling(false, 'up');
-      $header_top.css('background', 'transparent');
-      $nav.css('background', 'transparent');
-      $(this).css('background', '#374140');
-      $(this).find('h2').css('color', 'white');
-      $(this).find('h3').css('color', 'white');
-      $(this).find('p').css(
-        {
-          'color': '#DC3522',
-          'opacity': 1,
-          'transform': 'translateY(0)'
-        }
-      );
-    }
-  },
-
-  onSlideLeave: function( anchorLink, index, slideIndex, direction) {
-    if(anchorLink == 'fifthSection' && slideIndex == 1) {
-      $.fn.fullpage.setAllowScrolling(true, 'up');
-      $header_top.css('background', 'rgba(0, 47, 77, .3)');
-      $nav.css('background', 'rgba(0, 47, 77, .25)');
-    }
-  } 
-}); 
+});
