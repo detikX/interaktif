@@ -648,6 +648,63 @@ main {
     }
 }
 
+.eight {
+    background: linear-gradient(to bottom, #4a7f80,#b0aa7e);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    .helping {
+        p {
+            color: white;
+            padding-top: 16px;
+        }
+    }
+    &__first,&__second,&__third,&__four,&__five,&__six,&__seven {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 6;
+        @media screen and (max-width:766px) {
+            height: initial;
+            top: initial;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @media screen and(max-width:766px){
+                object-fit: contain;
+            }
+        }
+    }
+    &__second {
+        z-index: 9;
+    }
+    .semua-angkot {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+        .roda {
+            width: 26px;
+            position: absolute;
+            bottom: 0px;
+            left: 37px;
+            animation-name: spin;
+            animation-duration: 1000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            &.dua {
+                left: 126px;
+            }
+        }
+    }
+}
+
 @keyframes spin {
     from {
         transform:rotate(0deg);

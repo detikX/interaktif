@@ -8,6 +8,7 @@ $(document).ready(function () {
     var $isAnimatedFive = $('.five .is-animated');
     var $isAnimatedSix = $('.six .is-animated');
     var $isAnimatedSeven = $('.seven .is-animated');
+    var $isAnimatedEight = $('.eight .is-animated');
 	$('#fullpage').fullpage({
         onLeave: function(index,nextIndex, direction){
             // animate__animated animate__fadeIn" data-wow-delay="0.5s"
@@ -49,7 +50,13 @@ $(document).ready(function () {
                 else if( ( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 || index == 6 ) && nextIndex == 7 ) {
                     $isAnimatedSeven.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s 1s');
                     $isAnimatedSeven.eq(1).addClass('animate__animated animate__fadeOutLeftBig animate__delay-2s 2s');
-                    $isAnimatedSeven.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
+                    $isAnimatedSeven.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-3s 3s');
+                }
+
+                else if( ( index == 1 || index == 2 || index == 3 || index == 4 || index == 5 || index == 6 || index == 7 ) && nextIndex == 8 ) {
+                    $isAnimatedEight.eq(0).addClass('animate__animated animate__fadeIn animate__delay-1s 1s');
+                    $isAnimatedEight.eq(1).addClass('animate__animated animate__fadeInLeftBig animate__delay-3s 3s');
+                    // $isAnimatedEight.eq(2).addClass('animate__animated animate__fadeInLeft animate__delay-2s 2s');
                 }
         },
         // first animation
