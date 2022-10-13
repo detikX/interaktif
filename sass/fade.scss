@@ -99,7 +99,7 @@
         @media screen and (min-width:1440px) {
             bottom: -4vh;
         }
-        bottom: 1%;
+        bottom: -2%;
         left: 0;
         z-index: 5;
         img {
@@ -651,7 +651,9 @@ main {
         }
     }
 }
-
+.helping {
+    text-align: center;
+}
 .eight {
     background: linear-gradient(to bottom, #4a7f80,#b0aa7e);
     width: 100vw;
