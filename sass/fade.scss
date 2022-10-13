@@ -637,10 +637,23 @@ main {
             position: absolute;
             bottom: 0px;
             left: 37px;
+            animation-name: spin;
+            animation-duration: 1000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
             &.dua {
                 left: 126px;
             }
         }
+    }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
     }
 }
 
