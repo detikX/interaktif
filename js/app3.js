@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animationPabrik'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'img/bodymovin/pabrik/data.json',
+    name: 'myAnimation',
+  });
   // new WOW().init();
 /* Slide variable */
   var slideIndexBis = 1;
